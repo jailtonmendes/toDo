@@ -1,13 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="dark">
-    <ion-title>
-      TODO
+    <ion-title style="text-align: center;">
+      Lista de Tarefas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-list class="animated animate__bounceIn">
+    <ion-item *ngIf="tasks.length < 1">
+      <ion-label>Não há tarefas</ion-label>
+    </ion-item>
     <ion-item-sliding *ngFor="let task of tasks">
       <ion-item (click)="openActions(task)">
         <ion-label *ngIf="!task.done">{{ task.name }}</ion-label>
