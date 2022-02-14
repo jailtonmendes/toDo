@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActionSheetController, AlertController, ToastController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-clientes',
+  templateUrl: './clientes.page.html',
+  styleUrls: ['./clientes.page.scss'],
 })
-export class HomePage {
+export class ClientesPage {
+
   tasks: any[] = [];
 
   constructor(private alertCtrl: AlertController, private toastCtrl: ToastController, private actionSheetController: ActionSheetController) {
